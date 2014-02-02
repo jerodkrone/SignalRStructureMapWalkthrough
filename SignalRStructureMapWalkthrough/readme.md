@@ -1,0 +1,1 @@
+﻿SignalR 2.x implementation using StructureMap as the IoC container, see jerodkrone.com for corresponding blog post.  
