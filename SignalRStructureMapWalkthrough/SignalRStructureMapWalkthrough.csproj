@@ -82,6 +82,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+    <None Include="readme.md" />
     <Content Include="SignalR.Sample\jquery-1.10.2.min.js" />
     <Content Include="SignalR.Sample\jquery-1.10.2.min.map" />
     <None Include="Web.Debug.config">

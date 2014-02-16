@@ -47,6 +47,12 @@ namespace SignalRStructureMapWalkthrough
                 Resolver = resolver
             };
 
+            //Set GlobalHost dependency resolver to ensure hubs utilize the same configuration.
+            GlobalHost.DependencyResolver = resolver;
+
+            //Required For iPad, without this the "Spinner" will spin infinitely (https://github.com/SignalR/SignalR/issues/1406).
+            GlobalHost.Configuration.ConnectionTimeout = TimeSpan.FromSeconds(1);
+            GlobalHost.Configuration.LongPollDelay = TimeSpan.FromSeconds(5);
 
             Microsoft.AspNet.SignalR.StockTicker.Startup.ConfigureSignalR(app, config);
         }

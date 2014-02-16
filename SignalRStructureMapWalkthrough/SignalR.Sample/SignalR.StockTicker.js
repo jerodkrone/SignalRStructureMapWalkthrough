@@ -106,6 +106,7 @@ $(function () {
     });
 
     // Start the connection
+    //Todo: iPad specific start method that forces longPolling Transport (https://github.com/SignalR/SignalR/issues/1406).
     $.connection.hub.start()
         .then(init)
         .then(function () {
