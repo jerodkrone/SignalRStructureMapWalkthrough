@@ -47,7 +47,7 @@ namespace SignalRStructureMapWalkthrough
                 Resolver = resolver
             };
 
-            //Set GlobalHost dependency resolver to ensure hubs utilize the same configuration.
+            //Set GlobalHost dependency resolver to ensure hubs utilize the same configuration (http://jerodkrone.com/signalr-2-0-dependency-injection-using-globalhost/).
             GlobalHost.DependencyResolver = resolver;
 
             //Required For iPad, without this the "Spinner" will spin infinitely (https://github.com/SignalR/SignalR/issues/1406).
